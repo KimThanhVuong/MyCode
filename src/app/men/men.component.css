@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+.dash{
+    border-bottom: 2px dashed #ede8ff;
+    padding: 20px 0px 20px 0;
+}
+.d-f{
+    display: flex;
+}
+.m-t-30{
+    margin-top: 30px;
+}
+.content{
+    justify-content: space-between;
+    padding: 30px 50px;
+}
+.content_intro{
+    width: 20%;
+}
+.content_products{
+    width: 80%;
+}
+.content_title {
+    font-size: 18px;
+    padding: 20px 0 18px 0;
+}
+/* <!-- Phan tieu de search va tim kiem san pham --> */
+.content_boxSearch{
+    margin: 20px 0 36px 0;
+}
+.content_boxSearch-input {
+    border: none;
+    padding: 12px 20px;
+}
+.content_boxSearch-input:focus{
+    outline: none;
+}
+.search-icon {
+    padding: 20px;
+    background-color: #FE4536;
+    border-radius: 50%;
+    margin-left: -63px;
+    color: #fff;
+    cursor: pointer;
+}
+.search-icon:hover{
+    background-color: #84b77c;
+    transition: ease-in;
+}
+/*  */
+.content_product-list{
+    list-style: none;
+}
+.content_product-list-link{
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+}
+/*  */
+.content_box-link-tags{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #6f7172b0;
+    padding: 5px 24px;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+.content_box-link-tags:hover{
+    background-color: #FE4536;
+    color: #fff;
+    border: none;
+}
+
+/*  */
+.content_product-mini{
+    padding: 15px 0;
+}
+.content_product-box{
+    display: flex;
+    margin-top: 30px;
+}
+.content-img-price{
+    width: 100px;
+}
+.content_img-mini{
+    width: 100%;
+}
+.content-price{
+    font-weight: bold;
+    font-size: 14px;
+}
+.content-name-old {
+    font-size: 16px;
+}
+.content-price-old {
+    color: #747691;
+    margin-top: 13px;
+    font-size: 19px;
+    text-decoration: line-through;
+}
+
+
+/*  */
+img.content_products-img-icre-sm {
+    padding: 0 12px;
+}
+.content_products-feedback {
+    margin-top: 120px;
+}
+.feedback_btn{
+    border: none;
+    color: #fff;
+    background-color: #fe4536;
+    padding: 17px 55px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.m-r-18{
+    margin-right: 18px;
+}
+.product-info-link{
+        text-transform: uppercase;
+        color: #747691;
+        letter-spacing: 2px;
+        margin-right: 7px;
+        font-weight: bold;
+        text-decoration: none;
+}
+.content_products-info {
+    margin-left: 63px;
+}
+.product-info-title-h {
+    font-size: 44px;
+    margin: 18px 0;
+}
+.product-info-price-old {
+    font-size: 37px;
+    color: #747691;
+    text-decoration: line-through;
+}
+.product-info-price {
+    font-size: 33px;
+    margin-left: 39px;
+    color: #fe4536;
+}
+.info-price {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+}
+.product-info-text {
+    padding: 22px 0;
+    border-bottom: 1px solid #ddd;
+    line-height: 1.6;
+    font-size: 14px;
+}
+.product-info-brand {
+    padding: 30px 0;
+    font-size: 18px;
+}
+.product-info-brand-item {
+    font-size: 19px;
+    font-weight: 500;
+}
+.product-info-brand-item-x{
+    color: #6f7172;
+}
+.product-info-brand-item-y{
+    color: #fe4536;
+}
+.content_products-text {
+    margin-top: 83px;
+    padding-left: 64px;
+    line-height: 1.6;
+}
+img.content_products-banner-img {
+    width: 292px;
+    margin-left: 98px;
+}
+.Watch
+{
+    
+    border: 1px solid #ccc;
+    margin: 0 10px 50px 10px ;
+
+} 
+.productImageUrl img
+{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    
+}
+.Watch h1 
+{
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+.Watch h2
+{
+   
+    font-size: 20px;
+    color: #C89979;
+    margin: 10px 0;
+}
+.Watch h2 , a{
+    text-align: center;
+    color: black
+}
+.cart
+{
+
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #C89979;
+    padding: 10px 20px;
+    display: block;
+}
+

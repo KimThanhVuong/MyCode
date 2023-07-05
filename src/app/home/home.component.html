@@ -1,0 +1,75 @@
+<!--carousel-->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/Images/1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/Images/2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/Images/3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="banner-watch" style="display: flex; justify-content: space-around ; padding: 30px 120px;">
+  <div class="banner-watch-item"
+       style="width: 500px; height: 300px; background-image: url(assets/Images/6.jpg); background-size: cover; background-repeat: no-repeat;color: white;">
+    <div style="height: 100%; margin-top: 90px; padding-left: 12px;">
+      <p>Xu hướng 2022</p>
+      <a routerLink="/Men" class="header-link" style="color: white">
+        <h1>Đồng hồ nam</h1>
+    </a>
+    </div>
+  </div>
+
+  <div class="banner-watch-item"
+       style="width: 500px; height: 300px; background-image: url(assets/Images/5.jpg); background-size: cover; background-repeat: no-repeat;color: white;">
+    <div style="height: 100%; margin-top: 90px; padding-left: 12px;">
+      <p>Xu hướng 2022</p>
+      <a routerLink="/Woman" class="header-link" style="color: white">
+        <h1>Đồng hồ nữ</h1>
+    </a>
+    </div>
+  </div>
+</div>
+
+<div class="product-watches" style="padding: 30px 60px;">
+  <h2>Sản phẩm bán chạy</h2>
+  <div class="watches-list" style="display: flex; justify-content: space-between;">
+    <div class="watches-list-item" style="text-align: center;" *ngFor="let product of list">
+      <img src="{{product?.productImageUrl}}" alt="" style="width: 70%">
+      <div style="text-align: center;">
+        <a [routerLink]="['/details', product.productId]"> <h3 style="color: black;">{{product?.productName}}</h3></a>
+        <p>{{product?.productPrice | currency: 'VND'}}</p>
+
+        <div class="add-to-cart-button">
+          <button style="border: none;
+              padding: 8px 23px; background-color: #c89979; color: #fff; font-weight: bold; text-transform: uppercase; cursor: pointer;"
+                  (click)="addToCart(product)" 
+                  rel="nofollow"
+                  class="ajax_add_to_cart add_to_cart_button product_type_simple button primary is-flat mb-0 is-small">
+            Thêm vào giỏ
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

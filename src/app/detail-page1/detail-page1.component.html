@@ -1,0 +1,106 @@
+<div class="container mt-5 mb-5">
+
+    <div class="row">
+        <section class="section-content padding-y bg" style="background-color: #eee2dc;">
+            <div class="container">
+            <article class="card">
+                <div class="card-body">
+                        <div class="row">
+                            <aside class="col-md-6" *ngIf="Data">
+                                    <article class="gallery-wrap">
+                                        <div class="card img-big-wrap">
+                                            <a href="#"> <img src="{{Data[0].productImageUrl}}"></a>
+                                        </div> <!-- card img-big-wrap.// -->
+                                        <div class="thumbs-wrap">
+                                            <a href="#" class="item-thumb"> <img src="{{Data[0].productImageUrl}}"></a>
+                                            <a href="#" class="item-thumb"> <img src="{{Data[0].productImageUrl}}"></a>
+                                            <a href="#" class="item-thumb"> <img src="{{Data[0].productImageUrl}}"></a>
+                                            <a href="#" class="item-thumb"> <img src="{{Data[0].productImageUrl}}"></a>
+                                        </div> <!-- thumbs-wrap .// -->
+                                    </article> <!-- gallery-wrap .end// -->
+                            </aside>
+                            <main class="col-md-6">
+                                <article>
+                                    
+                                    <h3 class="title">{{Data[0].productName}}</h3>
+                                    <p>{{Data[0].productPrice | currency: 'VND'}}</p>
+                                    <div>
+                                        <ul class="rating-stars">
+                                            <li  class="stars-active"> 
+                                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                                                <i class="fa fa-star"></i> <i class="fa fa-star"></i>  
+                                                
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                                                <i class="fa fa-star"></i> <i class="fa fa-star"></i> 
+                                                <i class="fa fa-star"></i> 
+                                            </li>
+                                        </ul>
+                                        <span class="label-rating mr-3 text-muted">8/10</span>
+                                        <a href="#" class="btn-link  mr-3 text-muted"> <i class="fa fa-heart"></i> Save for later </a>
+                                        <a href="#" class="btn-link text-muted"> <i class="fa fa-book-open"></i> Compare </a>
+                                    </div> 
+            
+                                    <hr>
+                        
+                                    <div class="mb-3">
+                                        <h6>Short description</h6>
+                                        <ul class="list-dots mb-0">
+                                            <li>Thương hiệu : MONA</li>
+                                            <li>{{Data[0]. Productband}}</li>
+                                            <li>Bảo hành tại MONA : 1 năm</li>
+                                            
+                                        </ul>
+                                    </div>
+                                    
+                                  
+            
+                                    <div class="mb-3">
+                                        <var class="price h4">{{Data[0].product_price}}</var> <br>
+                                        
+                                    </div> <!-- price-detail-wrap .// -->
+            
+                                    <div class="mb-4">
+                                        <button href="#" (click)="addToCart(Data[0])"
+                                         class="btn btn-light" style=" background-color: #C89979;"
+                                         >
+                                            Thêm vào giỏ hàng
+                                        </button>
+                                       
+                                    </div>
+                                    
+                                </article> <!-- product-info-aside .// -->
+                            </main> <!-- col.// -->
+                        </div> <!-- row.// -->
+                </div> <!-- card-body.// -->
+            </article>
+        
+            <article class="card mt-5">
+                <div class="card-body">
+                    <div class="row">
+                        <aside class="col-md-6">
+                            <h5>5 lý do nêm mua tại Đồng Hồ MONA</h5>
+                            <ul class="list-check">
+                                <li>Cam kết chính hãng</li>
+                                <li>Thay bin miễn phí trọn đời</li>
+                                <li>Bảo hành vượt chính sách </li>
+                                <li>Miễn phí vận chuyển</li>
+                                <li>1 đổi 1</li>
+                                <li>Nhân viên chuyên nghiệp</li>
+                            </ul>
+                        </aside>
+                    </div> <!-- row.// -->
+                    <hr>
+                    <p>
+                        Không chỉ biết đến là địa điểm tọa lạc của thương hiệu thời trang hàng đầu Việt Nam, 
+                        MONA còn là tên một bộ sưu tập đồng hồ cơ gắn liền với phong cách cổ điển để
+                         các tín đồ có thể tìm đến và chiêm ngưỡng. MONA M006.407.16.033.00 chính 
+                         là một thiết kế nằm trong số đó.
+                    </p>
+                </div> <!-- card-body.// -->
+            </article>
+            </div>
+        </section>
+    </div>
+</div>

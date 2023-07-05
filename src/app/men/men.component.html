@@ -1,0 +1,86 @@
+<div id="wrapper">
+    <div class="content d-f">
+        <div class="content_intro">
+            <!-- Phan tieu de search va tim kiem san pham -->
+            <div class="content_search dash">
+                <h2 class="content_title">TÌM KIẾM</h2>
+                <div class="content_boxSearch">
+                    <input class="content_boxSearch-input" type="text" placeholder="Search Products...">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </div>
+            </div>
+           <!-- Phần catelory products -->
+           <div class="content_catelogy dash">
+            <h2 class="content_title">DANH MỤC SẢN PHẨM</h2>
+            <ul class="content_product-list">
+                <li class="content_product-list-item">
+                    <a  routerLink="/Men" class="content_product-list-link" routerLinkActive="active">Đồng hồ nam </a>
+                </li>
+                <li class="content_product-list-item">
+                    <a  routerLink="/Woman" class="content_product-list-link" routerLinkActive="active">Đồng hồ nữ</a>
+                </li>
+            </ul>
+        </div>
+            <!-- Product Mini Price -->
+            <div class="content_product-mini">
+                <h2 class="content_title">PRODUCTS</h2>
+                <div class="content_product-box">
+                    <div class="content-img-price">
+                        <img class="content_img-mini" src="assets/Images/1.1.jpg" alt="">
+                        <p class="content-price">{{1450000 | currency: 'VND'}}</p>
+                    </div>
+                    <div class="content-name-old">
+                        <h3 class="content-name-old">classico1</h3>
+                        <p class="content-price-old">{{2550000 | currency: 'VND'}}</p>
+                    </div>
+                </div>
+                <div class="content_product-box">
+                    <div class="content-img-price">
+                        <img class="content_img-mini" src="assets/Images/15.jpg" alt="">
+                        <p class="content-price">{{2230000 | currency: 'VND'}}</p>
+                    </div>
+                    <div class="content-name-old">
+                        <h3 class="content-name-old">classico2</h3>
+                        <p class="content-price-old">{{2700000 | currency: 'VND'}}</p>
+                    </div>
+                </div>
+                <div class="content_product-box">
+                    <div class="content-img-price">
+                        <img class="content_img-mini" src="assets/Images/1.5.jpg" alt="">
+                        <p class="content-price">{{2780000 | currency: 'VND'}}</p>
+                    </div>
+                    <div class="content-name-old">
+                        <h3 class="content-name-old">classico3</h3>
+                        <p class="content-price-old">{{3000000 | currency: 'VND'}}</p>
+                    </div>
+                </div>
+                <div class="content_product-box">
+                    <div class="content-img-price">
+                        <img class="content_img-mini" src="assets/Images/14.jpg" alt="">
+                        <p class="content-price">{{2340000 | currency: 'VND'}}</p>
+                    </div>
+                    <div class="content-name-old">
+                        <h3 class="content-name-old">classico4</h3>
+                        <p class="content-price-old">{{2550000 | currency: 'VND'}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="containe">
+            <div class="row">
+                <div class="col-lg-3" *ngFor="let dt of Detail">
+                    <div class="Watch" >
+                            <img  src="{{dt.productImageUrl}}"alt="" style="width:225px;height:225px;">
+                            <a [routerLink]="['/details', dt.productId]"> <h1>{{dt.productName}}</h1></a>
+                            <br>
+                            <h2>{{dt. productPrice | currency: 'VND'}}</h2>
+                            <br>
+                            <a  class="cart" (click)="addToCart(dt)">Thêm vào giỏ</a>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</div>

@@ -1,0 +1,195 @@
+
+  <!--Header-->
+  <div id="header">
+    <div class="header-top">
+        <div class="header-contact">
+            <div class="header-contact-left">
+                <i class="fa-solid fa-location-dot header-contact-icon"></i>
+                <span class="header-contact-text">319 - C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM</span>
+            </div>
+            <div class="header-contact-right">
+                <i class="fa-solid fa-phone header-contact-icon"></i>
+                <span class="header-contact-text">0898673211</span>
+            </div>
+        </div>
+        <div class="header-social">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </div>
+
+    <div class="header-content">
+        <div class="header-logo">
+            <img src="assets/Images/logo.png" alt="" class="header-logo-img">
+        </div>
+        <div class="header-search">
+            <input class="header-search-input" type="text" placeholder="Tìm kiếm">
+            <div class="header-search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+        <div class="header-icon-sort">
+            <i class="fa-solid fa-cart-shopping" data-bs-toggle="dropdown" aria-expanded="false" style="cursor:pointer">
+              <span class="ml-1">
+                {{cart?.length}}
+              </span>
+            </i>
+            <ul class="dropdown-menu">
+              <li *ngFor="let product of cart">
+                <img src="{{product?.productImageUrl}}" alt="" width="40px" height="40px">
+                <div>
+                  {{product?.productQuantity}}
+                </div>
+                <div>
+                  {{((product?.productQuantity || 0) * (product?.productPrice || 0))?.toLocaleString()}}
+                </div>
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                Total: {{total?.toLocaleString()}}
+              </li>
+              <li><hr class="dropdown-divider"></li>
+              <div>
+                  <li>
+                        <a routerLink="/Checkout" class="header-link active"  routerLinkActive="active">
+                            Check out
+                        </a>
+                    </li>
+              </div>
+              
+            </ul>
+            <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="header-bottom">
+        <ul class="header-list">
+            <li class="header-item">
+                <a routerLink="/Home" class="header-link active"  routerLinkActive="active">
+                    Trang chủ
+                </a>
+            </li>
+            <li class="header-item">
+                <a routerLink="/About" class="header-link" routerLink="/About" routerLinkActive="active">
+                    Giới thiệu
+                </a>
+            </li>
+            <li class="header-item">
+                <a routerLink="/Men" class="header-link">
+                    Đồng hồ nam
+                </a>
+            </li>
+            <li class="header-item">
+                <a routerLink="/Woman" class="header-link">
+                    Đồng hồ nữ
+                </a>
+            </li>
+           
+            <li class="header-item">
+                <a routerLink="/contact" class="header-link">
+                    Liên hệ
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+  <router-outlet  ></router-outlet>
+  <div class="information" style="display: flex; justify-content: space-between; margin: 0 60px; padding: 40px 0;
+align-items: center; border-top: 1px solid #ccc;">
+    <div class="register-info">
+        <h1 style="font-size: 27px; font-weight: bold;">ĐĂNG KÝ NHẬN THÔNG TIN</h1>
+    </div>
+    <div class="search">
+        <input type="text" placeholder="Email..." style="padding: 8px 10px;
+        width: 360px; border: none; border-top-left-radius: 5px; border-bottom-left-radius: 5px;">
+        <button style="border: none;
+        padding: 8px 23px; background-color: #c89979; color: #fff; font-weight: bold; text-transform: uppercase; cursor: pointer;">Đăng ký</button>
+
+    </div>
+</div>
+<!--footer-->
+<div id="footer">
+  <div class="footer_one">
+      <h2 class="footer-heading">THÔNG TIN LIÊN HỆ</h2>
+      <ul class="footer-list">
+          <li class="footer-item">
+              <i class="fa-solid fa-location-dot p-t"></i>
+              <div class="footer-text">319 C16 Lý Thường Kiệt, Phường 15, <br> Quận 11, Tp.HCM</div>
+          </li>
+          <li class="footer-item">
+              <i class="fa-solid fa-phone"></i>
+              <span class="footer-text">0898673211</span>
+          </li>
+          <li class="footer-item">
+              <i class="fa-solid fa-envelope-open p-t"></i>
+              <div class="footer-text">
+                  <span class="d-b">vuongkimthanh2001@gmail.com</span>
+                  <span>mon@mona.media</span>
+              </div>
+          </li>
+          <li class="footer-item">
+              <i class="fa-brands fa-skype"></i>
+              <span class="footer-text">KimThanh</span>
+          </li>
+      </ul>
+  </div>
+  <div class="footer_two">
+      <h2 class="footer-heading">LIÊN KẾT</h2>
+          <ul class="footer-list">
+              <li class="footer-item">
+                  <p class="footer-text">Giới thiệu</p>
+              </li>
+              <li class="footer-item">
+                  <p class="footer-text">Đồng hồ nam</p>
+              </li>
+              <li class="footer-item">
+                  <p class="footer-text">Đồng hồ nữ</p>
+              </li>
+              <li class="footer-item">
+                  <p class="footer-text">Blogs</p>
+              </li>
+              <li class="footer-item">
+                  <p class="footer-text">Liên hệ</p>
+              </li>
+          </ul>
+  </div>
+  <div class="footer_three">
+      <h2 class="footer-heading">HỖ TRỢ</h2>
+      <ul class="footer-list">
+          <li class="footer-item">
+              <p class="footer-text">Hướng dẫn mua hàng</p>
+          </li>
+          <li class="footer-item">
+              <p class="footer-text">Hướng dẫn thanh toán</p>
+          </li>
+          <li class="footer-item">
+              <p class="footer-text">Chính sách bảo hành</p>
+          </li>
+          <li class="footer-item">
+              <p class="footer-text">Chính sách đổi trả</p>
+          </li>
+          <li class="footer-item">
+              <p class="footer-text">Tư vấn khách hàng</p>
+          </li>
+      </ul>
+  </div>
+  <div class="footer_four">
+      <h2 class="footer-heading">TẢI ỨNG DỤNG TRÊN</h2>
+      <p class="footer-app-text">Ứng dụng Mona Watch hiện có sẵn trên <br> Google Play & App Store. Tải nó ngay.</p>
+      <img class="footer-google" src="assets/Images/googlePlay.jpg" alt="">
+      <img class="footer-app" src="assets/Images/appStore.jpg" alt="">
+  </div>
+</div>
+<div class="footer-end">
+  <div class="footer-source">
+      <span>© Bản quyền thuộc về . Thiết kế website
+          <img class="footer-panda-img" src="assets/Images/gau.png" alt="">
+          <a class="footer-source-link" href="">Vương Kim Thành</a>
+      </span>
+  </div>
+  <div class="banks">
+      <img src="assets/Images/banks.png" alt="">
+  </div>
+</div>

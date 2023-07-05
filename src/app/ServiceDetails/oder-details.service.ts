@@ -1,0 +1,180 @@
+import { Product } from './../models/product';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class OderDetailsService {
+
+  constructor() { }
+ Details = [
+   {
+    productId: 1,
+    productName: "Đồng hồ nam Ageloce f01",
+    productCategory: "Classico",
+    productPrice:2780000,
+    productDescription: "Thương hiệu: MONA",
+    Productband: "Dây đeo : Dây da chính hãng ",
+    productImageUrl: 'assets/Images/8.jpg',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 10/10,
+    favourite: false,
+    productSeller: 'Người bán 5'
+  },
+  {
+    productId: 4,
+    productName: "Đồng hồ nam Ageloce f02",
+    productCategory: "Classic",
+    productPrice: 1990000,
+    productDescription: "Đồng hồ 4 miêu tả",
+    Productband: "Dây đeo : Dây đeo",
+    productImageUrl: 'assets/Images/7.jpg',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 9/10,
+    favourite: false,
+    productSeller: 'Người bán 4',
+  },
+  {
+    productId: 3,
+    productName: "Đồng hồ nam Ageloce f03",
+    productCategory: "Classic",
+    productPrice: 1870000,
+    productDescription: "Đồng hồ 1 miêu tả",
+    Productband: "Dây đeo : Dây cao su",
+    productImageUrl: 'assets/Images/product-02.png',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 10/10,
+    favourite: false,
+    productSeller: 'Ngươi bán 3'
+  },
+  {
+    productId: 2,
+    productName: "Đồng hồ nam Ageloce f04",
+    productCategory: "Classic",
+    productPrice: 1980000,
+    productDescription: "Đồng hồ 2 miêu tả",
+    Productband: "Dây đeo : Dây cao su",
+    productImageUrl: 'assets/Images/product-04.png',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 8/10,
+    favourite: false,
+    productSeller: 'Ngươi bán 2'
+  },
+  {
+    productId: 5,
+    productName: "Đồng hồ nam Ageloce f05",
+    productCategory: "Classic",
+    productPrice: 2560000,
+    productDescription: "Đồng hồ 2 miêu tả",
+    Productband: "Dây đeo : Dây cao su",
+    productImageUrl: 'assets/Images/product-03.png',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 10,
+    favourite: false,
+    productSeller: 'Ngươi bán 2'
+  },
+  {
+    productId: 6,
+    productName: "Đồng hồ nam Ageloce f06",
+    productCategory: "Classic",
+    productPrice: 1230000,
+    Productband: "Dây đeo : Dây đeo",
+    productDescription: "Đồng hồ 2 miêu tả",
+    productImageUrl: 'assets/Images/nam3.jpg',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 10,
+    favourite: false,
+    productSeller: 'Ngươi bán 2'
+  },
+  {
+    productId: 7,
+    productName: "Đồng hồ nam Ageloce f07",
+    productCategory: "Classic",
+    productPrice: 3450000,
+    productDescription: "Đồng hồ 2 miêu tả",
+    Productband: "Dây đeo : Thép không ghỉ",
+    productImageUrl: 'assets/Images/nam4.jpg',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 10,
+    favourite: false,
+    productSeller: 'Ngươi bán 2'
+  },
+  {
+    productId: 8,
+    productName: "Đồng hồ nam Ageloce f08",
+    productCategory: "Classic",
+    productPrice: 2340000,
+    productDescription: "Đồng hồ 2 miêu tả",
+    Productband: "Dây đeo : Dây đeo",
+    productImageUrl: 'assets/Images/nam5.jpg',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 10,
+    favourite: false,
+    productSeller: 'Ngươi bán 2'
+  },
+  {
+    productId: 9,
+    productName: "Đồng hồ nam Ageloce f09",
+    productCategory: "Classic",
+    productPrice: 1230000,
+    productDescription: "Đồng hồ 2 miêu tả",
+    Productband: "Dây đeo : Dây đeo",
+    productImageUrl: 'assets/Images/nam6.jpg',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 10,
+    favourite: false,
+    productSeller: 'Ngươi bán 2'
+  },
+  {
+    productId: 10,
+    productName: "Đồng hồ nam Ageloce f010",
+    productCategory: "Classic",
+    productPrice: 1350000,
+    productDescription: "Đồng hồ 2 miêu tả",
+    Productband: "Dây đeo : Dây cao su",
+    productImageUrl: 'assets/Images/nam7.jpg',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 10,
+    favourite: false,
+    productSeller: 'Ngươi bán 2'
+  },
+  {
+    productId: 11,
+    productName: "Đồng hồ nam Ageloce f011",
+    productCategory: "Classic",
+    productPrice: 1300000,
+    productDescription: "Đồng hồ 2 miêu tả",
+    Productband: "Dây đeo : Dây đeo",
+    productImageUrl: 'assets/Images/nam8.jpg',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 10,
+    favourite: false,
+    productSeller: 'Ngươi bán 2'
+  },
+  {
+    productId: 12,
+    productName: "Đồng hồ nam Ageloce f012",
+    productCategory: "Classic",
+    productPrice: 1400000,
+    productDescription: "Đồng hồ 2 miêu tả",
+    Productband: "Dây đeo : Dây đeo",
+    productImageUrl: 'assets/Images/nam9.jpg',
+    productAdded: 1,
+    productQuantity: 0,
+    ratings: 10,
+    favourite: false,
+    productSeller: 'Ngươi bán 2'
+  },
+ ]
+}
